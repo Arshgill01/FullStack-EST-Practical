@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h2 { text-align: center; margin-bottom: 20px; }
+        p { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; }
+        textarea { height: 80px; }
+        .radio-group label, .checkbox-group label { display: inline-block; margin-right: 15px; }
+        button { padding: 10px 20px; margin-right: 10px; border: 1px solid #333; cursor: pointer; }
+        button:hover { background: #ddd; }
+    </style>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    <form method="POST">
+        <p><label>Name<br><input type="text" name="name" required></label></p>
+        <p><label>Email<br><input type="email" name="email" required></label></p>
+        <p><label>Password<br><input type="password" name="password" required></label></p>
+        <p><label>Mobile Number<br><input type="tel" name="mobile" required></label></p>
+        <p><label>Gender<br>
+            <span class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </span>
+        </label></p>
+        <p><label>Course<br>
+            <select name="course" required>
+                <option value="">Select a course</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="business-administration">Business Administration</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="commerce">Commerce</option>
+            </select>
+        </label></p>
+        <p><label>Skills<br>
+            <span class="checkbox-group">
+                <label><input type="checkbox" name="skills" value="html"> HTML</label>
+                <label><input type="checkbox" name="skills" value="css"> CSS</label>
+                <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
+                <label><input type="checkbox" name="skills" value="python"> Python</label>
+                <label><input type="checkbox" name="skills" value="java"> Java</label>
+            </span>
+        </label></p>
+        <p><label>Address<br><textarea name="address" required></textarea></label></p>
+        <p><button type="submit">Submit</button> <button type="reset">Reset</button></p>
+    </form>
+</body>
+</html>
